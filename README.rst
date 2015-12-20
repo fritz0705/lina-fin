@@ -22,3 +22,13 @@ Let
   \end{pmatrix}\right)
 
 :math:`A` is a basis of :math:`\mathbb F_7^7`.
+
+The Problem
+===========
+
+It does not exist free software which allows one to answer this question.
+
+The Solution
+============
+
+Todo.
