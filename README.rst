@@ -31,4 +31,19 @@ It does not exist free software which allows one to answer this question.
 The Solution
 ============
 
-Todo.
+.. math::
+
+  L(A, 0) = Span\left(\begin{pmatrix}
+    1 \\ 5 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0
+  \end{pmatrix}, \begin{pmatrix}
+    2 \\ 4 \\ 0 \\ 1 \\ 0 \\ 0 \\ 0
+  \end{pmatrix}, \begin{pmatrix}
+    3 \\ 3 \\ 0 \\ 0 \\ 1 \\ 0 \\ 0
+  \end{pmatrix}, \begin{pmatrix}
+    4 \\ 2 \\ 0 \\ 0 \\ 0 \\ 1 \\ 0
+  \end{pmatrix}, \begin{pmatrix}
+    5 \\ 1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 1
+  \end{pmatrix}\right)
+
+In other words: :math:`A` is not a basis of :math:`\mathbb F_7^7`.
+
