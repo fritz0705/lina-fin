@@ -54,11 +54,13 @@ normalizeHead x@(0:_) = x
 normalizeHead (v:vs) = recip v *. (v:vs)
 normalizeHead _ = []
 
+eliminateLeft :: (Eq k, Fractional k) => [k] -> [k] -> [k]
+eliminateLeft (0:us) (v:vs) = v : eliminateLeft us vs
+eliminateLeft u v@(vh:_) = v .-. vh *. u
+eliminateLeft _ u = u
+
 eliminateRem :: (Eq k, Fractional k) => [[k]] -> [k] -> [k]
-eliminateRem (u:us) v = eliminateRem us $ v .-. (v !! rang) *. u
-	where
-		rang = length . takeWhile (== 0) $ u
-eliminateRem _ v = v
+eliminateRem = flip $ foldr eliminateLeft
 
 gaussHom :: (Eq k, Fractional k) => [[k]] -> [[k]]
 gaussHom [] = []
